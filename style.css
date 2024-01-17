@@ -1,0 +1,217 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff; /* Color de fondo predeterminado */
+    color: #000; /* Color de texto predeterminado */
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.spread {
+    display: flex;
+    margin: auto;
+}
+.blink-green {
+    animation: blink-green 1s infinite;
+}
+
+.blink-red {
+    animation: blink-red 1s infinite;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+@keyframes blink-green {
+    0%, 100% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: green;
+    }
+}
+
+@keyframes blink-red {
+    0%, 100% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: red;
+    }
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajusta la altura según tus necesidades */
+    transition: background-color 0.5s, color 0.5s; /* Agrega transiciones para un cambio suave */
+}
+
+div > div {
+    width: 80%;
+}
+
+#BUY, #SPREAD, #SELL {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 10px; /* Espacio entre los bloques */
+    border-radius: 20px;
+}
+
+.dark-mode #BUY, .dark-mode #SPREAD, .dark-mode #SELL {
+    background-color: #444; /* Color de fondo en modo oscuro */
+    color: #fff; /* Color de texto en modo oscuro */
+}
+
+/* Estilos para el botón deslizante de modo oscuro */
+.dark-mode-toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.dark-mode-toggle input {
+    display: none;
+}
+
+.dark-mode-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #444;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.dark-mode-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .dark-mode-slider {
+    background-color: #2196F3;
+}
+
+input:focus + .dark-mode-slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .dark-mode-slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Estilos para el botón deslizante de sonido */
+.sound-toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.sound-toggle input {
+    display: none;
+}
+
+.sound-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #777; /* Color de fondo para el botón de sonido */
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.sound-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #ddd; /* Color del indicador de sonido */
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .sound-slider {
+    background-color: #4CAF50; /* Color de fondo cuando el sonido está activado */
+}
+
+input:focus + .sound-slider {
+    box-shadow: 0 0 1px #4CAF50; /* Sombra cuando el sonido está activado */
+}
+
+input:checked + .sound-slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.positive-change {
+            background-color: green;
+            color: white;
+        }
+
+        .negative-change {
+            background-color: red;
+            color: white;
+        }
+
+        .price-blink {
+            animation: blink-animation 1s infinite;
+        }
+
+        /* Nuevas reglas de estilo para los porcentajes */
+        .spread-positive {
+            color: green;
+        }
+
+        .spread-negative {
+            color: red;
+        }
+
+        .spread-strong {
+            color: #008000; /* Verde fuerte */
+        }
+
+        .spread-light {
+            color: #00ff00; /* Verde claro */
+        }
+
+        @keyframes blink-animation {
+            0%, 50%, 100% {
+                opacity: 1;
+            }
+
+            25%, 75% {
+                opacity: 0;
+            }
+        }

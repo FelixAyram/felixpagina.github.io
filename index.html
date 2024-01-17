@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>precios no verficado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="SELL"></div>
+        <div id="middle-container">
+            <div class="button-container">
+                <!-- Botón para el modo oscuro -->
+                <span>
+                    <h2>boton modo oscuro</h2>
+                    <label class="dark-mode-toggle">
+                        <input type="checkbox" id="darkModeToggle" checked onchange="toggleDarkMode()">
+                        <span class="dark-mode-slider"></span>
+                    </label>
+                </span>
+
+                <!-- Botón deslizante para el sonido -->
+                <span>
+                    <h2>boton sonido On/Off</h2>
+                    <label class="sound-toggle">
+                        <input type="checkbox" id="soundToggle" checked onchange="toggleSound()">
+                        <span class="sound-slider"></span>
+                    </label>
+                </span>
+            </div>
+            <div id="SPREAD"></div>
+        </div>
+        <div id="buycontent">
+            <div id="BUY">
+            </div>
+            <div id="imput">
+                <label for="conversionInput">Cantidad de pesos: </label>
+                <input id="conversionInput" type="text" placeholder="Ingrese cantidad de pesos">
+                <div id="resultadoConversion"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
